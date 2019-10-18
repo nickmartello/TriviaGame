@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     let questionArray = [{
         question: "What is Superman's real name?",
-        options: ["Peter Parker", "Kal-el" , "Clark Kent", "Bruce Wayne"],
+        options: ["Peter Parker", "Kal-el", "Clark Kent", "Bruce Wayne"],
         answer: 1
     }, {
         question: "Which Robin did The Joker kill?",

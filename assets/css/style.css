@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+#start {
+    background: blue;
+    color: red;
+    font-size: 30px;
+}
+.change {
+    margin-top: 15%;
+    padding: 10px;
+    color: red;
+    font-family: 'Rock Salt', cursive;
+    font-size: 35px;
+}
