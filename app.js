@@ -12,6 +12,7 @@ $(document).ready(function () {
     let optionsArr;
     let correctAnswer;
 
+
     let questionArray = [{
         question: "What is Superman's real name?",
         options: ["Peter Parker", "Kal-el", "Clark Kent", "Bruce Wayne"],
