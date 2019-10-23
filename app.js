@@ -60,9 +60,12 @@ $(document).ready(function () {
         $('#result').hide();
         $("#instructions").hide();
         $("#remaining-time").show();
+         $("#timer").text(questionTimer + " seconds");
+
         questions();
     });
     function questions() {
+        questionTimer = 10;
 
         intervalTimer = setInterval(timer, 1000);
 
@@ -82,12 +85,12 @@ $(document).ready(function () {
             correctAnswer = questionArray[current].answer;
 
             if (userAnswer === correctAnswer) {
-
+                
                 correctAnswerResponse();
             }
             else {
-
                 wrongAnswerResponse();
+
             }
 
         });
@@ -98,7 +101,7 @@ $(document).ready(function () {
     };
     function timer() {
         questionTimer--;
-        $("#timer").html(questionTimer + " seconds");
+        $("#timer").text(questionTimer + " seconds");
         if (questionTimer <= 0) {
             unanswered++;
             nextQuestion();
@@ -119,7 +122,6 @@ $(document).ready(function () {
         if (current > 9) {
             return end();
         };
-        questionTimer = 10;
         $("#buttons-div").empty();
         questions();
     };
@@ -136,11 +138,13 @@ $(document).ready(function () {
             $(this).hide();
             $('#results').show();
             $("#remaining-time").show();
+            $("#questions").show();
             current = 0;
             unanswered = 0;
             correct = 0;
             incorrect = 0;
             questions();
+            $("#timer").text(questionTimer + " seconds");
         });
     };
 });
